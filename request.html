@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>طلب خدمة / إبلاغ عن مشكلة</title>
+  <link rel="stylesheet" href="request.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="right-icons">
+      <span class="caret"><i class="fas fa-caret-down"></i></span>
+      <span class="user-avatar"><i class="fas fa-user-tie"></i></span>
+      <span class="icon-group"><i class="fas fa-comment"></i></span>
+      <span class="icon-group">
+        <i class="fas fa-bell"></i>
+        <span class="badge">4</span>
+      </span>
+      <div class="search-container">
+        <input type="text" placeholder="ابحث هنا...">
+        <span class="search-icon"><i class="fas fa-search"></i></span>
+      </div>
+    </div>
+    <div class="logo">
+      <img src="logo1.jpg" alt="JUFIX">
+    </div>
+  </header>
+
+  <div id="notifications" class="notification-panel">
+    <div class="header"><i class="fas fa-cog"></i> الإشعارات</div>
+    <div class="item">تم إنجاز الطلب رقم 77: "جهاز العرض في قاعة 302 لا يعمل"<span class="date">2025/04/10</span></div>
+    <div class="item">تم تعديل تفاصيل الطلب رقم 76 من قبل مسؤول الصيانة<span class="date">2025/02/17</span></div>
+    <div class="item">تم تحديث حالة الطلب رقم 75 إلى "قيد التنفيذ"<span class="date">2025/01/30</span></div>
+    <div class="item">رؤية جميع الإشعارات</div>
+  </div>
+
+  <div id="messages" class="message-box">
+    <div class="header">
+      <span>رائد محمد عبدالرحمن صبيح | 21324</span>
+      <span onclick="toggleMessages()"><i class="fas fa-times"></i></span>
+    </div>
+    <div class="message">السلام عليكم، تم تنفيذ الصيانة في مختبر 104 <br><small>13:42</small></div>
+    <div class="input-box">
+      <i class="far fa-smile"></i>
+      <input type="text" placeholder="اكتب رسالتك...">
+      <i class="fas fa-paper-plane"></i>
+    </div>
+  </div>
+
+  <div id="dropdown" class="dropdown-menu">
+    <div><i class="fas fa-user"></i> الملف الشخصي</div>
+    <div><i class="fas fa-cog"></i> الإعدادات</div>
+    <div><i class="fas fa-lock"></i> تغيير كلمة المرور</div>
+    <div><i class="fas fa-globe"></i> تغيير اللغة</div>
+    <div><i class="fas fa-sign-out-alt"></i> تسجيل الخروج</div>
+  </div>
+
+  <main>
+    <h2 style=" margin-top: 30px; color: #1d2f23;">طلب خدمة / إبلاغ عن مشكلة</h2>
+    <div class="form-box" style="background: #fff; padding: 30px; border-radius: 12px; max-width: 1000px; margin: 30px auto; display: flex; gap: 30px; flex-wrap: wrap; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+
+      <!-- Right Section -->
+      <div style="flex: 1 1 45%;">
+        <p><strong>الاسم:</strong> محمد عامر إبراهيم عيسى</p>
+        <p><strong>مكان العمل:</strong> كلية الملك عبدالله الثاني لتكنولوجيا المعلومات</p>
+
+        <label>مكان العمل بالتفصيل</label>
+        <input type="text" style="width: 100%; padding: 5px; margin-bottom: 10px;  border-radius: 10px;">
+
+        <label>أوقات التواجد</label>
+        <input type="text" style="width: 100%; padding: 5px; margin-bottom: 10px;border-radius: 10px;">
+
+        <label>رقم الهاتف</label>
+        <input type="text" style="width: 100%; padding: 5px; margin-bottom: 10px;border-radius: 10px;">
+
+        <label>رقم الداخلي</label>
+        <input type="text" style="width: 100%; padding: 5px; margin-bottom: 10px;border-radius: 10px;">
+
+        <label>نوع المشكلة</label>
+        <select style="width: 100%; padding: 5px; margin-bottom: 10px;border-radius: 10px;">
+          <option>-- الأجهزة --</option>
+          <option>-- الفني --</option>
+          <option>-- المباني --</option>
+          <option>-- الكهرباء --</option>
+          <option>-- الشبكة واللاتصالات --</option>
+          <option>-- السلامة العامة --</option>
+          <option>-- ملاحظات وشكاوي --</option>
+        </select>
+
+        <label>تفاصيل المشكلة</label>
+        <select style="width: 100%; padding: 5px; margin-bottom: 10px;border-radius: 10px;">
+          <option>-- عطل في جهاز الكومبيوتر --</option>
+          <option>-- مشكلة في شاشة العرض --</option>
+          <option>-- (projector)خلل في جهاز --</option>
+          <option>-- توقف الطابعة عن العمل --</option>
+          
+        </select>
+      </div>
+
+      <!-- Left Section -->
+     
+      <div style="flex: 1 1 45%;">
+        <br><br><br><br><br>
+        <label>تفاصيل الطلب / المشكلة*</label>
+        <textarea rows="5" style="width: 80%; padding: 5px; margin-bottom: 10px;border-radius: 10px;"></textarea>
+        <br>
+
+        <label>إرفاق ملف / صورة</label>
+        <input type="file" style="width: 80%; margin-bottom: 10px;">
+
+        <textarea rows="5" style="width: 80%; padding: 5px;border-radius: 10px;"></textarea>
+
+        <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+          <button style="background-color: #11381e; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer;">إرسال</button>
+          <button style="background-color: #11381e; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer;">إلغاء</button>
+        </div>
+      </div>
+      <p style="text-align: center; margin-top: 20px;">
+        <a href="homepage.html" style="color: #11381e; font-weight: bold;">
+ الرجوع للصفحة الرئيسية        </a>
+      </p>
+      
+
+    </div>
+  </main>
+  <script src="homepage.js"></script>
+
+</body>
+</html>
